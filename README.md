@@ -1,4 +1,4 @@
-# CSI plugin for local block devices [![Build Status](http://travis-ci.org/thecodeteam/csi-blockdevices.svg?branch=master)]
+# CSI plugin for local block devices [![Build Status](http://travis-ci.org/enquier/csi-blockdevices.svg?branch=master)]
 
 ## Description
 CSI-BlockDevices is a Container Storage Interface
@@ -19,7 +19,7 @@ None
 
 CSI-BlockDevices can be installed with Go and the following command:
 
-`$ go get github.com/thecodeteam/csi-blockdevices`
+`$ go get github.com/enquier/csi-blockdevices`
 
 The resulting binary will be installed to `$GOPATH/bin/csi-blockdevices`.
 
@@ -27,8 +27,8 @@ If you want to build `csi-nblockdevices` with accurate version information,
 you'll need to run the `go generate` command and build again:
 
 ```bash
-$ go get github.com/thecodeteam/csi-blockdevices
-$ cd $GOPATH/src/github.com/thecodeteam/csi-blockdevices
+$ go get github.com/enquier/csi-blockdevices
+$ cd $GOPATH/src/github.com/enquier/csi-blockdevices
 $ go generate && go install
 ```
 
@@ -41,7 +41,7 @@ Before starting the plugin please set the environment variable
 
 ```bash
 $ CSI_ENDPOINT=csi.sock ./csi-blockdevices
-INFO[0000] configured com.thecodeteam.blockdevices       devicedir=/dev/disk/csi-blockdevices privatedir=/dev/disk/csi-bd-private
+INFO[0000] configured com.rexray.blockdevices       devicedir=/dev/disk/csi-blockdevices privatedir=/dev/disk/csi-bd-private
 INFO[0000] identity service registered
 INFO[0000] controller service registered
 INFO[0000] node service registered
@@ -55,11 +55,11 @@ any of the standard exit signals.
 The CSI specification uses the gRPC protocol for plug-in communication.
 The easiest way to interact with a CSI plugin is via the Container
 Storage Client (`csc`) program provided via the
-[GoCSI](https://github.com/thecodeteam/gocsi) project:
+[GoCSI](https://github.com/rexray/gocsi) project:
 
 ```bash
-$ go get github.com/thecodeteam/gocsi
-$ go install github.com/thecodeteam/gocsi/csc
+$ go get github.com/rexray/gocsi
+$ go install github.com/rexray/gocsi/csc
 ```
 
 Then, set have `csc` use the same `CSI_ENDPOINT`, and you can issue commands
@@ -72,11 +72,11 @@ $ ./csc -e csi.sock identity supported-versions
 0.1.0
 
 $ ./csc -v 0.1.0 -e csi.sock identity plugin-info
-"com.thecodeteam.blockdevices"	"0.1.0+11"
+"com.rexray.blockdevices"	"0.1.0+11"
 "commit"="24167e6b3486c7938243c4a97fd5fb410390b8e5"
 "formed"="Wed, 14 Feb 2018 18:40:13 UTC"
 "semver"="0.1.0+11"
-"url"="https://github.com/thecodeteam/csi-nfs"
+"url"="https://github.com/rexray/csi-nfs"
 ```
 
 Create a loopback device and make it available to plugin:
@@ -135,7 +135,7 @@ No additional parameters are currently supported/required by the plugin
 
 ## Configuration
 The CSI-BlockDevices SP is built using the GoCSI CSP package. Please see its
-[configuration section](https://github.com/thecodeteam/gocsi#configuration)
+[configuration section](https://github.com/rexray/gocsi#configuration)
 for a complete list of the environment variables that may be used to
 configure this SP.
 
@@ -186,5 +186,5 @@ supported.
 
 ## Support
 For any questions or concerns please file an issue with the
-[csi-blockdevices](https://github.com/thecodeteam/csi-blockdevices/issues)
+[csi-blockdevices](https://github.com/enquier/csi-blockdevices/issues)
 project or join the Slack channel #project-rexray at codecommunity.slack.com.

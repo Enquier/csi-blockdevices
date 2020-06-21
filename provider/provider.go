@@ -1,9 +1,9 @@
 package provider
 
 import (
-	"github.com/thecodeteam/gocsi"
+	"github.com/rexray/gocsi"
 
-	"github.com/thecodeteam/csi-blockdevices/service"
+	"github.com/enquier/csi-blockdevices/service"
 )
 
 // New returns a new Mock Storage Plug-in Provider.

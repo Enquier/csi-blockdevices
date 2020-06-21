@@ -8,15 +8,15 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/thecodeteam/gocsi"
-	csictx "github.com/thecodeteam/gocsi/context"
+	"github.com/rexray/gocsi"
+	csictx "github.com/rexray/gocsi/context"
 
-	"github.com/thecodeteam/csi-blockdevices/core"
+	"github.com/enquier/csi-blockdevices/core"
 )
 
 const (
 	// Name is the name of the CSI plugin
-	Name = "com.thecodeteam.blockdevices"
+	Name = "com.rexray.blockdevices"
 
 	// SupportedVersions is a list of supported CSI versions
 	SupportedVersions = "0.1.0"
@@ -27,7 +27,7 @@ const (
 
 // Manifest is the SP's manifest.
 var Manifest = map[string]string{
-	"url":    "https://github.com/thecodeteam/csi-blockdevices",
+	"url":    "https://github.com/enquier/csi-blockdevices",
 	"semver": core.SemVer,
 	"commit": core.CommitSha32,
 	"formed": core.CommitTime.Format(time.RFC1123),

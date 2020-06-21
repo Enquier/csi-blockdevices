@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc/status"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-	"github.com/thecodeteam/csi-blockdevices/block"
+	"github.com/enquier/csi-blockdevices/block"
 )
 
 var (

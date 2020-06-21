@@ -6,8 +6,8 @@ package main
 import "C"
 
 import (
-	"github.com/thecodeteam/csi-blockdevices/provider"
-	"github.com/thecodeteam/csi-blockdevices/service"
+	"github.com/enquier/csi-blockdevices/provider"
+	"github.com/enquier/csi-blockdevices/service"
 )
 
 ////////////////////////////////////////////////////////////////////////////////
