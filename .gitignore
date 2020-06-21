@@ -1,1 +1,4 @@
 csi-blockdevices
+
+#IDE Specific Files
+.idea

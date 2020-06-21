@@ -3,7 +3,7 @@ sudo: false
 language: go
 go:
   - 1.9.3
-go_import_path: github.com/thecodeteam/csi-blockdevices
+go_import_path: github.com/rexray/csi-blockdevices
 
 os:      linux
 
